@@ -1,0 +1,15 @@
+
+
+
+Feature List:
+ ✔ Add multiple ingredients @done (15-04-27 14:15)
+ ☐ Convert Units of a recipe
+ ✔ Name a recipe @done (15-04-27 14:15)
+ ☐ Scale a recipe
+ ✔ get user input @done (15-04-27 16:46)
+ ☐ Add properpty specific convion vlaues in the object-->the user need not worry about flour not having the same density as water etc
+ ✔ Each recipe need a constructor @done (15-04-27 16:46)
+ ✔ clone the name, amount and units when the the user clicks more stuff @done (15-04-27 14:15)
+ ☐ When scale is clicked the user will be prompted for a factor to scale by
+ ☐ standardization
+   Add 

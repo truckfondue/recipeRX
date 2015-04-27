@@ -1,0 +1,19 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#input-template {
+	display: none;
+}
+
+#name-your-rx {
+	display: none;
+}
+
+.clone ,.action-btns{
+	text-align: center;
+}

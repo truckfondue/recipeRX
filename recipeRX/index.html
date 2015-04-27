@@ -1,0 +1,105 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RecipeRx</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">RecipeRx</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#myrx">MyRx</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Welcome to RecipeRx</h1>
+        <p class="lead">Got a recipe? RecipeRx makes it easy to converts and scale recipes. </p>
+        <p><h3>Get your RecipeRx now.</h3> </p>
+      </div>
+
+    </div><!-- /.container -->
+    <div class="container">
+      
+        <div class="container">
+          <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 text-center">
+            <button type="submit" class="btn btn-danger" >Name you Rx</button>
+              <div id='name-your-rx' class="form-group">
+              
+                <label class="sr-only" >RxName</label>
+                <input type="text" class="form-control" id='rx-name' placeholder="RxName">
+            </div>
+          </div>
+
+
+        </div>
+    <div class="container">
+      <div id="items" class="form-inline"></div>
+      <div class="col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 text-center">
+        <div><button type="submit" class="btn btn-info" id='add-items'>add items</button></div>
+        <div><button type="submit" class="btn btn-success" id='create'>create-original</button></div>
+        
+      </div>
+    </div>    
+      
+      
+      
+      <form class="form-inline">
+        <div class="container" id="input-template">
+          <div class="form-group offset-2">
+            <label class="sr-only">Name</label>
+            <input type="text" class="form-control name" placeholder="Name">
+          </div>
+          
+          <div class="form-group">
+            
+            <label class="sr-only">Amount</label>
+            <input type="text" class="form-control amount" placeholder="Amount">
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Units</label>
+            <input type="text" class="form-control units" placeholder="Units">
+          </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-5 action-btns">
+          <button type="submit" class="btn btn-primary">Convert</button>
+          <button type="submit" id="scale-btn" class="btn btn-warning">Scale</button>
+
+        </div>
+      </form>
+    </div>
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
