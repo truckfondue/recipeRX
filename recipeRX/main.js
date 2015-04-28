@@ -79,9 +79,71 @@ $('.btn-danger').on('click', function(){
 $("#scale-btn").on('click', function(e){
 	e.preventDefault();
 	console.log('Scale Button event-handler');
+<<<<<<< HEAD
 	var scaleFactor = prompt('What factor would you like to scale by? \n For ex: 2, 3, 1/2...')
 });
 
+=======
+	var scaleFactor = prompt('What factor would you like to scale by? \n For ex: 2, 3, 1/2...');
+	$('.clone').each(function(){
+		var amount = $(this).find('.amount').val();
+		$(this).find('.amount').val(amount*scaleFactor);
+	});	
+
+});
+
+$('#convert-btn').on('click', function(e){
+	e.preventDefault(e);
+	alert('By clicking the convert button you have opted to convert your entries to metric.\nUnits will be changed to grams(g) for values less than 1000g. Those larger will be converted to kilograms(kg).\nClick ok to continue.');
+	$('.clone').each(function(){
+		var amount = $(this).find('.amount').val();
+		var units = $(this).find('.units').val();
+		metricConverter(amount, units);
+
+		$(this).find('.amount').val(A);
+		$(this).find('.units').val(B);
+		
+	});	
+
+});
+
+// var A = [];
+// var B = [];
+var metricConverter = function(amount, units) {
+	A = [];
+	B = [];
+	var conversionFactor = 1;
+	var metricUnit = 'g';
+	if (units === 'ea') {
+		conversionFactor = 1;
+		metricUnit = 'ea';
+	}
+	else if (units === 'tsp'){
+		conversionFactor = 5;
+	}
+	else if (units === 'tbsp'){
+		conversionFactor = 15;
+	}
+	else if (units === 'oz'){
+		conversionFactor = 28;
+	}
+	else if (units === 'lbs'){
+		conversionFactor = 454;
+	}
+	
+	var newQuantity = amount * conversionFactor;
+	if (newQuantity > 1000) {
+		newQuantity = newQuantity/1000;
+		metricUnit = 'kg';
+	}
+	console.log(newQuantity, metricUnit);
+	A.push(newQuantity);
+	B.push(metricUnit);
+	return;
+
+};
+
+>>>>>>> 86c4b9ea538e69d62ccb1fc233afccff8058490f
 var Ingredient = function(name, quantity, unit) {
 	this.name = name;
 	//this.type = type;
@@ -98,4 +160,4 @@ var cheese = new Ingredient('cheese', 2, 'oz');
 
 var tortilla = new	Ingredient('tortilla', 1, 'ea');
 
-var burrito = new Recipe('Burrito', [chicken, rice, cheese, tortilla])
+var burrito = new Recipe('Burrito', [chicken, rice, cheese, tortilla]);
